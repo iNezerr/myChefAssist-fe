@@ -1,3 +1,43 @@
+/* App.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family:"Regular";
+  src: local("Roboto-Regular"),
+  url('./assets/poppins_font/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family:"Medium";
+  src: local("Roboto-Medium"),
+  url('./assets/poppins_font/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family:"Bold";
+  src: local("Roboto-Bold"),
+  url('./assets/poppins_font/Poppins-Bold.ttf') format('truetype');
+}
+
+/* Font-face rules for Roboto */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/poppins_font/Roboto-Regular.ttf') format('truetype'),
+       url('/poppins_font/Roboto-Bold.ttf') format('truetype'),
+       local('Roboto-Regular'),
+       url('./poppins_font/Poppins-Regular.ttf') format('trutype');
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/poppins_font/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+/* Additional font weights and styles can be added similarly */
+body {
+  @apply font-roboto;
+}

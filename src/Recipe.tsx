@@ -5,7 +5,7 @@ import RecipeIngredientsSelector from './RecipeIngredientsSelector';
 const Recipe: React.FC = () => {
   const recipe = {
     name: 'Vegetable Wellington',
-    image: 'https://placehold.co/600x400',
+    image: 'https://cdn.theliveinkitchen.com/wp-content/uploads/2021/11/04090723/Veggie-Wellington-The-Live-In-Kitchen-4.jpg',
     description: 'A delicious and elegant vegetarian dish with a flaky pastry crust.',
     ingredients: [
       '1 sheet puff pastry',

@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-gray-100'>
+      <div className='font-primaryRegular bg-gray-100'>
         <RouterProvider router={router} />
       </div>
     </>

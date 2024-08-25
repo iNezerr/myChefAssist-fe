@@ -31,7 +31,7 @@ const Navbar: React.FC<Props> = (_props: Props) => {
   }, []);
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-5 text-white">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <h1 className="text-white font-bold text-xl">myChefAssist</h1>
         {/* Mobile Menu Button */}

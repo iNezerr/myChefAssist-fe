@@ -11,8 +11,8 @@ const SearchResults: React.FC<Props> = (_props: Props) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           {/* Result 1 */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Recipe Title 1</h3>
-            <p className="text-gray-300 mb-4">A brief description of the recipe goes here.</p>
+            <h3 className="text-lg font-semibold mb-2">Vegetable Wellington</h3>
+            <p className="text-gray-300 mb-4">A delicious and elegant vegetarian dish with a flaky pastry crust.</p>
             <NavLink to="recipe-details">
               <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                 View Recipe
@@ -21,8 +21,8 @@ const SearchResults: React.FC<Props> = (_props: Props) => {
           </div>
           {/* Result 2 */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Recipe Title 2</h3>
-            <p className="text-gray-300 mb-4">A brief description of the recipe goes here.</p>
+            <h3 className="text-lg font-semibold mb-2">Mushroom Wellington</h3>
+            <p className="text-gray-300 mb-4">A rich and savory dish featuring a hearty mushroom filling wrapped in flaky puff pastry, perfect for a comforting meal.</p>
             <NavLink to="recipe-details">
               <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                 View Recipe
@@ -31,8 +31,8 @@ const SearchResults: React.FC<Props> = (_props: Props) => {
           </div>
           {/* Result 3 */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Recipe Title 3</h3>
-            <p className="text-gray-300 mb-4">A brief description of the recipe goes here.</p>
+            <h3 className="text-lg font-semibold mb-2">Spinach and Feta Wellington</h3>
+            <p className="text-gray-300 mb-4">A delicious combination of spinach and feta cheese encased in a golden puff pastry, offering a flavorful and nutritious twist on the classic Wellington.</p>
             <NavLink to="recipe-details">
               <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                 View Recipe
