@@ -1,31 +1,16 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import RecipeDetail from './RecipeDetail';
 import RecipeIngredientsSelector from './RecipeIngredientsSelector';
+import type { Recipe } from './types/Recipe';
 
 const Recipe: React.FC = () => {
-  const recipe = {
-    name: 'Vegetable Wellington',
-    image: 'https://cdn.theliveinkitchen.com/wp-content/uploads/2021/11/04090723/Veggie-Wellington-The-Live-In-Kitchen-4.jpg',
-    description: 'A delicious and elegant vegetarian dish with a flaky pastry crust.',
-    ingredients: [
-      '1 sheet puff pastry',
-      '2 cups mixed vegetables',
-      '1 tbsp olive oil',
-      '1 tsp salt',
-      '1/2 tsp black pepper',
-    ],
-    instructions: [
-      'Preheat oven to 375°F (190°C).',
-      'Sauté vegetables in olive oil until tender.',
-      'Season with salt and pepper.',
-      'Wrap vegetables in puff pastry and place on a baking sheet.',
-      'Bake for 25-30 minutes until golden brown.',
-    ],
-    nutrition: 'Calories: 300 | Carbs: 50g | Protein: 10g | Fat: 15g',
-    reviews: '(100 reviews)',
-  };
+  const location = useLocation();
+  const { recipe } = location.state as { recipe: Recipe };
+
 
   return (
+    //TODO: Add a section if there is no recipe in the location state
     <section className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8">

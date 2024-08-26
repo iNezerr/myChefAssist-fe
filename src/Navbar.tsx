@@ -10,6 +10,8 @@ const NavItems = [
 ];
 
 const Navbar: React.FC<Props> = (_props: Props) => {
+
+  //TODO: handle mobile menu button click, the second time it should close the menu
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 

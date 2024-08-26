@@ -9,7 +9,7 @@ import Recipe from './Recipe'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<LandingPage />} >
-      <Route path="recipe-details" element={<Recipe />} />
+      <Route path="recipe-details/" element={<Recipe />} />
       <Route index element={<Search />} />
       <Route path="about" element={<About />} />
     </Route>

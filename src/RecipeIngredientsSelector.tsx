@@ -1,9 +1,5 @@
 import React from 'react';
-
-type Recipe = {
-  name: string;
-  ingredients: string[];
-};
+import { Recipe } from './types/Recipe';
 
 const RecipeIngredientsSelector: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
   return (

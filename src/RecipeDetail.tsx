@@ -1,14 +1,6 @@
 import React from 'react';
+import { Recipe } from './types/Recipe';
 
-type Recipe = {
-  name: string;
-  image: string;
-  description: string;
-  ingredients: string[];
-  instructions: string[];
-  nutrition: string;
-  reviews: string;
-};
 
 const RecipeDetail: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
   return (
@@ -19,7 +11,7 @@ const RecipeDetail: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
 
       <div className="flex flex-col md:flex-row mb-6">
         <img
-          src={recipe.image}
+          src={recipe.image_url}
           alt={recipe.name}
           className="w-full md:w-1/3 h-auto rounded-lg mb-4 md:mb-0"
         />
@@ -43,8 +35,8 @@ const RecipeDetail: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
               </ul>
             </div>
           </div>
-          <p><strong>Nutrition:</strong> {recipe.nutrition}</p>
-          <p><strong>Reviews:</strong> {recipe.reviews}</p>
+          {}
+          <p><strong>Nutrition:</strong> {recipe.nutrition_facts}</p>
           <button className="bg-green-500 text-white px-4 py-2 mt-4 rounded hover:bg-green-600">
             Choose Ingredients
           </button>
