@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Recipe } from './types/Recipe';
 
+interface RecipeDetailProps {
+  recipe: Recipe;
+  onChooseIngredients: () => void // New prop for handling the toggle
+}
 
-const RecipeDetail: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
+const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, onChooseIngredients }) => {
+  const [chooseOpen, setChooseOpen] = useState(false);
+  const handleShowChooseIngredient = () => {
+
+    setChooseOpen(!chooseOpen);
+    onChooseIngredients()
+  }
+
   return (
     <div className="w-full md:w-2/3 p-4 bg-gray-800 text-gray-200 rounded-lg">
       <div className="flex flex-col md:flex-row justify-between mb-4 ">
@@ -37,7 +48,7 @@ const RecipeDetail: React.FC<{ recipe: Recipe }> = ({ recipe }) => {
           </div>
           {}
           <p><strong>Nutrition:</strong> {recipe.nutrition_facts}</p>
-          <button className="bg-green-500 text-white px-4 py-2 mt-4 rounded hover:bg-green-600">
+          <button onClick={handleShowChooseIngredient} className="bg-green-500 text-white px-4 py-2 mt-4 rounded hover:bg-green-600">
             Choose Ingredients
           </button>
         </div>
