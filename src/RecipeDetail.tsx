@@ -3,16 +3,20 @@ import { Recipe } from './types/Recipe';
 
 interface RecipeDetailProps {
   recipe: Recipe;
-  onChooseIngredients: () => void // New prop for handling the toggle
+  onClickChooseIngredients: () => void // New prop for handling the toggle
+  onSaveRecipe: () => void; // New prop for handling save recipe
 }
 
-const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, onChooseIngredients }) => {
+const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, onClickChooseIngredients, onSaveRecipe }) => {
   const [chooseOpen, setChooseOpen] = useState(false);
   const handleShowChooseIngredient = () => {
 
     setChooseOpen(!chooseOpen);
-    onChooseIngredients()
+    onClickChooseIngredients()
   }
+  const handleSaveRecipe = () => {
+    onSaveRecipe();
+  };
 
   return (
     <div className="w-full md:w-2/3 p-4 bg-gray-800 text-gray-200 rounded-lg">
@@ -50,6 +54,9 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, onChooseIngredients
           <p><strong>Nutrition:</strong> {recipe.nutrition_facts}</p>
           <button onClick={handleShowChooseIngredient} className="bg-green-500 text-white px-4 py-2 mt-4 rounded hover:bg-green-600">
             Choose Ingredients
+          </button>
+          <button onClick={handleSaveRecipe} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Save Recipe
           </button>
         </div>
       </div>
