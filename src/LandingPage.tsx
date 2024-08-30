@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Search from './Search'
 import { Outlet } from 'react-router-dom'
 
 type Props = {}
