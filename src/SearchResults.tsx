@@ -11,7 +11,7 @@ const SearchResults: React.FC<Props> = ({ results }) => {
   const navigate = useNavigate();
   const handlePOSTRecipeDetails = async (recipe_name: string) => {
     try {
-      const response = await axios.post<Recipe>("http://localhost:8000/api/select-recipe/", {
+      const response = await axios.post<Recipe>("https://mychefassist.vercel.app/api/select-recipe/", {
         recipe_name: recipe_name,
       },
         {

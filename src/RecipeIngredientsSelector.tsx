@@ -23,7 +23,7 @@ const RecipeIngredientsSelector: React.FC<{ recipe: Recipe }> = ({ recipe }) => 
   // Function to handle sending selected ingredients to the server
   const handleSubmit = () => {
     // Example API call with Axios
-    axios.post('/api/saveIngredients', {
+    axios.post('https://mychefassist.vercel.app/api/saveIngredients', {
       ingredients: selectedIngredients,
     })
       .then((response) => {

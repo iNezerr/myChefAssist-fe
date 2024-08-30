@@ -15,7 +15,7 @@ const Search: React.FC<Props> = (_props: Props) => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8000/api/get-recipe-list/`, {
+      const response = await axios.get(`https://mychefassist.vercel.app/api/get-recipe-list/`, {
         params: { q: query },
       });
       // console.log(response.data.recipe)
